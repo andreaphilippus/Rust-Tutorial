@@ -8,8 +8,6 @@ Three types of *structs* that can be created using the `struct`:
 
 Refer to `.\3.1 structure.rs` file.
 
-
-
 ## Classic struct
 
 Syntax:
@@ -20,8 +18,6 @@ struct Person {
     age: u8,
 }
 ```
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-
 
 - `struct Person {...}` defines a **new custom type** called `Person`
 - Inside the braces we have **fields with names and types**
@@ -200,7 +196,7 @@ We can see two things here:
    1. Quite confusing, but field name and existing variable to feed into the struct do not have to have different names.
    2. The important part is that the struct type should match.
 
-Plus, a leading `_` from `_rectangle` just tells the compiler that we are aware that this variable is not used. `rustc` gives a warning (not error!) when a variable is not used. 
+Plus, a leading `_` from `_rectangle` just tells the compiler that we are aware that this variable is not used. `rustc` gives a warning (not error!) when a variable is not used.
 
 In MATLAB, it would work straightforward, like `rectangle.top_left.x = left_edge;`. Accessing nested field in Rust is just like MATLAB:
 
@@ -208,7 +204,7 @@ In MATLAB, it would work straightforward, like `rectangle.top_left.x = left_edge
 
 **IMPORTANT THING:**
 
-- In Rust, when using `let` to define a variable of a structure, **we must give values to ALL EXISTING FIELDS**. We cannot omit any single field when initializing. For example, 
+- In Rust, when using `let` to define a variable of a structure, **we must give values to ALL EXISTING FIELDS**. We cannot omit any single field when initializing. For example,
 
 ```rust
     let _rectangle = Rectangle {
